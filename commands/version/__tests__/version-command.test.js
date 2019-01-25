@@ -67,6 +67,7 @@ describe("VersionCommand", () => {
       expect(libPush).toHaveBeenLastCalledWith(
         "origin",
         "master",
+        ["package-1@1.0.1", "package-2@1.0.1", "package-3@1.0.1", "package-4@1.0.1", "package-5@1.0.1"],
         expect.objectContaining({
           cwd: testDir,
         })
@@ -175,6 +176,7 @@ describe("VersionCommand", () => {
       expect(libPush).toHaveBeenLastCalledWith(
         "origin",
         "master",
+        ["package-1@1.0.1", "package-2@2.1.0", "package-3@4.0.0", "package-4@4.1.0", "package-5@5.0.1"],
         expect.objectContaining({
           cwd: testDir,
         })
@@ -398,6 +400,7 @@ describe("VersionCommand", () => {
       expect(libPush).toHaveBeenLastCalledWith(
         "upstream",
         "master",
+        ["package-1@1.0.1", "package-2@1.0.1", "package-3@1.0.1", "package-4@1.0.1", "package-5@1.0.1"],
         expect.objectContaining({
           cwd: testDir,
         })
@@ -420,6 +423,7 @@ describe("VersionCommand", () => {
       expect(libPush).toHaveBeenLastCalledWith(
         "durable",
         "master",
+        ["package-1@1.0.1", "package-2@1.0.1", "package-3@1.0.1", "package-4@1.0.1", "package-5@1.0.1"],
         expect.objectContaining({
           cwd: testDir,
         })

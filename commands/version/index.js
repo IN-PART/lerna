@@ -554,7 +554,9 @@ class VersionCommand extends Command {
   gitPushToRemote() {
     this.logger.info("git", "Pushing tags...");
 
-    return gitPush(this.gitRemote, this.currentBranch, this.execOpts);
+    const tags = this.packagesToVersion.map(pkg => `${pkg.name}@${this.updatesVersions.get(pkg.name)}`);
+
+    return gitPush(this.gitRemote, this.currentBranch, tags, this.execOpts);
   }
 }
 
